@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 
-import CarSearch from './Components/CarSearch/CarSearch'
-import Cars from './Components/Cars/Cars'
+import Cars from './Components/Cars'
 
 import {
     Grid
@@ -18,7 +17,6 @@ class App extends Component {
         return (
             <Router>
                 <Grid>
-                    <Route path="/" component={CarSearch}/>
                     <Route path="/" component={Cars}/>
                 </Grid>
             </Router>
