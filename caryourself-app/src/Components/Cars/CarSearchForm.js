@@ -1,23 +1,29 @@
 import React from 'react'
 import {
     InputGroup,
-    FormControl,
-    Button
+    FormControl
 } from 'react-bootstrap'
 
-class CarSearch extends React.Component {
+class CarSearchForm extends React.Component {
+
+    handleChange = event => {
+        this.setState({
+            inputValue: event.target.value
+        })
+    }
     render() {
         return (
             <form>
                 <h3>Dobierz Auto</h3>
                 <InputGroup>
                     <FormControl
+                        onChange={this.props.handleChange}
+                        type='text'
                     />
-                    
                 </InputGroup>
             </form>
         )
     }
 }
 
-export default CarSearch
+export default CarSearchForm
