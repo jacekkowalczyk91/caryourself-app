@@ -14,16 +14,17 @@ class Cars extends React.Component {
         ).then(
             response => response.json()
         ).then(
-            cars => this.setState({ cars })
+            cars => this.setState({cars})
         )
     }
 
     render() {
+        const {cars} = this.state
 
         return (
             <div>
                 <h2>Cars</h2>
-                <CarsView/>
+                <CarsView cars={cars}/>
             </div>
         )
     }

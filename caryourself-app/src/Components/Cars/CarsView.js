@@ -2,15 +2,15 @@ import React from 'react'
 
 class CarsView extends React.Component {
 
-    state = {
-        cars: null
-    }
+    // state = {
+    //     cars: null
+    // }
     render(){
-        const { cars } = this.state
+        const { cars } = this.props
 
         return(
             <div>
-                <h1>asd</h1>
+                <h4>asd</h4>
                 <ul>
                     {
                         cars && cars.map(
