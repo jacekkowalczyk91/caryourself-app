@@ -29,7 +29,7 @@ class CarsView extends React.Component {
                 <ul>
                     {
                         cars && cars.filter(
-                            cars => cars.name.includes(this.state.currentSearchPhrase)
+                            cars => cars.name.toLowerCase().includes(this.state.currentSearchPhrase)
                         )
                             .map(
                             ({id, name, fuel_consumption, capacity, max_speed}) => (
